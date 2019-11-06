@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Epicodus Credit Union</title>
+</head>
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>Welcome to the Epicodus Credit Union</h1>
+    </div>
+  </div>
+  <div class="container">
+    <form id="register">
+      <h4>Register a new account:</h4>
+      <div class="form-group">
+        <label>Name:</label>
+        <div class="row">
+          <div class="col-md-4">
+            <input id="first-name" class="form-control" type="text" name="first-name" placeholder="First">
+          </div>
+          <div class="col-md-4">
+            <input id="last-name" class="form-control" type="text" name="last-name" placeholder="Last">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="balance">Initial amount to deposit:</label>
+        <div class="row">
+          <div class="col-md-4">
+            <input id="balance" class="form-control" type="number" name="balance" step="any" min="0" required>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-outline-primary">Register</button>
+    </form>
+    <div class="card text-white bg-info mb-3 account-info">
+  <div class="card-header">Account Information</div>
+  <div class="card-body">
+      <h5 class="card-title">Name: <span class="name"></span></h5>
+      <p class="card-text">Balance: <span class="balance"></span></p>
+    </div>
+  </div>
+    <form id="activity">
+      <div class="form-group">
+        <h4>What would you like to do?</h4>
+        <div class="radio">
+          <label>
+            <input id="deposit" type="radio" name="activity" value="deposit" checked>
+            Deposit
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input id="withdraw" type="radio" name="activity" value="withdraw">
+            Withdraw
+          </label>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <input id="dw" class="form-control" type="number" step="any" min="0" name="activity" required>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-outline-primary">Enter</button>
+      <button type="reset" class="btn btn-outline-primary" value="Reset" onClick="window.location.reload()">Start Again</button>
+    </form>
+  </div>
+</body>
+</html>
